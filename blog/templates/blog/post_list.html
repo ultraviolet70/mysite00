@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="ru-luna1918">
+<head>
+	<link rel="icon" href="{% static 'img/436lipstick_100221.ico'%}" type="image/x-icon">
+	<meta charset="utf-8">
+    <title>MakeUP</title>
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+	<style >
+  h1 {
+    Font-family: Georgia;
+    color: #0000FF;
+    background-color: #E0FFFF;
+    }
+  h3{
+    Font-family: Georgia;
+    color: #00BFFF;
+  }
+  h2{
+    Font-family: Georgia;
+	  font-style: bold;
+    color: #0000FF;
+    background-color: #E0FFFF;
+  }
+  </style>
+</head>
+<body class="p-3 mb-2 bg-dark text-white">
+    <h1>MakeUP</h1>
+    <h3>Немного о приложении</h3> 
+    <p align="justify">
+      Основным назначением программы «MakeUP» является предоставление работы с финансовыми отчетами внутри предприятия, упрощение процесса работы с данными клиентов и поставщиков, оформления заказов и поставок. Программа не кроссплатформенна и может работать только на персональных ПК, поддерживающих .NET Framework. 
+    </p>
+	<center>
+    <h2>Загрузка приложения</h2>
+    <p>
+      ПЕРЕЙДИТЕ ПО ССЫЛКЕ, ДЛЯ ТОГО ЧТОБЫ УВИДЕТЬ РАБОТУ ПРИЛОЖЕНИЯ
+      <p>
+        <a class="alert alert-primary" href="https://www.canva.com/design/DADuHl-kE7g/jvHo4OT8TY5bacYzqhaGKw/view?utm_content=DADuHl-kE7g&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">ПРЕЗЕНТАЦИЯ ПРОГРАММНОГО ПРОДУКТА</a>
+      </p>
+    </p>
+    <p>
+      <a class="btn btn-outline-primary" href= "{% static 'shop.rar'%}">СКАЧАТЬ</a>
+    </p>
+    <p>
+      <a class="alert alert-primary" href="{% url 'crm' %}">Уже пользуетесь нашим приложением? Оставьте отзыв!</a>
+    </p>
+	</center>
+  </body>
+</html>

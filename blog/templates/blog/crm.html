@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+ <head>
+	<link rel="icon" href="{% static 'img/436lipstick_100221.ico'%}" type="image/x-icon">
+  <meta charset="utf-8">
+  <title>Отзыв</title>
+  <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+	<style >
+  h2 {
+    Font-family: Georgia;
+    color: #E0FFFF;
+    }
+label{
+	font-size: 16pt;
+  color: #00BFFF;
+	}
+  </style>
+ </head>
+ <body class="p-3 mb-2 bg-dark text-white"> 
+ {% block content %}
+ <form action="{% url 'crm_insert' %}" method="POST">
+ {% csrf_token %}
+  <center>
+	<h2>Оставьте отзыв о приложении</h2>
+  </center>
+  <div class="container-fluid">
+  <div>
+    <label for="exampleFormControlInput1">Ваш e-mail:</label>
+    <input type="email" class="form-control" name="email_fb" placeholder="name@example.com">
+  </div>
+  <p></p>
+  <div>
+    <label for="exampleFormControlTextarea1">Текст отзыва:</label>
+    <textarea class="form-control" name="text_fb" rows="7" placeholder="Лучшее приложение 10\10"></textarea>
+  </div>
+  <p></p>
+  <p><button type="submit" class="btn btn-outline-primary btn-lg btn-block" onclick="alertFunction()">Отправить отзыв</button></p>
+  <script>
+   function alertFunction() {
+    alert("Спасибо! Ваш отзыв записан!","Спасибо за отзыв!");}
+   </script>
+  </div>
+</form>
+{% endblock %}
+ </body>
+</html>
